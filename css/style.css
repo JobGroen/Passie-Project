@@ -1,8 +1,8 @@
 body {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 /* H E A D E R - H O M E P A G E */
@@ -41,8 +41,7 @@ header.intro article p {
 header.intro article img {
   background: #e2c043;
   border-radius: 50%;
-  padding: 50px;
-  width: 250px;
+  width: 350px;
   margin-bottom: 15px;
 }
 
@@ -84,6 +83,7 @@ header.intro video {
   z-index: 1;
 }
 
+
 /* H E A D E R - N A V I G A T I O N - S U B P A G E  */
 header.page {
   background-color: none;
@@ -96,27 +96,67 @@ header.page {
   top: 0;
 }
 
-header.page article.nav img {
+header.page article img {
   width: 250px;
   float: left;
 }
 
-header.page article.nav span {
+header.page article span {
   margin-right: 45px;
-  color: #000000;
+  color: #ffffff;
   float: right;
   transition: .3s ease;
 }
 
-header.page article.nav span:hover {
+header.page article span:hover {
   color: #e2c043;
 }
 
-header.page article.nav span:after {
+header.page article span:after {
   content: "Menu";
   margin-left: 15px;
   text-transform: uppercase;
 }
+
+header.page article a img {
+  width: 70px;
+  background-color: #e2c043;
+  border-radius: 50%;
+  margin: -15px 0 0 30px;
+  transition: .75s ease;
+}
+
+header.page article a:hover img {
+  transform: rotate(360deg);
+}
+
+header.page article a:after {
+  content: "Soundbike";
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 10px;
+  font-size: 35px;
+  display: inline-block;
+  margin-top: -7.5px;
+  transition: .5s ease;
+}
+
+header.page article a:hover:after {
+  color: #e2c043;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* N A V I G A T I O N - M E N U */
@@ -188,8 +228,65 @@ nav.overlay .closebtn {
   nav ul a { font-size: 60px;}
 }
 
+
+
+
+
+
+
+
+
+
+
 /* S U B P A G E - H E A D I N G */
-article.top-side {
-  color: #000000;
+section.top-page {
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  position: relative;
   text-align: center;
+  margin-top: -20px;
+  color: #ffffff;
+  padding: 20vh 0;
 }
+
+section.top-page::after {
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  opacity: .8;
+  content: "";
+  left: 0;
+  top: 0;
+}
+
+section.top-page::after {
+  z-index: 1;
+}
+section.top-page > * {
+  position: relative;
+  z-index: 100;
+}
+
+section.top-page h1 {
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  color: #e2c043;
+  font-size: 45px;
+}
+
+section.top-page p {
+  font-size: 20px;
+}
+
+section.over-soundbike {
+  background: url("/Passie-Project/img/over-soundbike.jpg");
+}
+
+
+
+
+
+/* A B O U T - M E */
