@@ -26,6 +26,7 @@ closenav.onclick = function () {
 function validateForm() {
   document.getElementById('status').innerHTML = "Sending...";
   formData = {
+      'tel': $('input[name=tel]').val(),
       'name': $('input[name=name]').val(),
       'email': $('input[name=email]').val(),
       'subject': $('input[name=subject]').val(),
@@ -34,6 +35,7 @@ function validateForm() {
 
   var name = $('input[name=name]');
   var email = $('input[name=email]');
+  var tel = $('input[name=tel]');
   var subject = $('input[name=subject]');
   var message = $('textarea[name=message]');
   var visual_error = "1px solid red";
@@ -49,6 +51,12 @@ function validateForm() {
       email.css("border", visual_error);
   } else {
       email.css("border", visual_reset);
+  }
+
+  if (tel.val() == '') {
+    tel.css("border", visual_error);
+  } else {
+    tel.css("border", visual_reset);
   }
 
   if (subject.val() == '') {

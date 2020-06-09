@@ -1,12 +1,12 @@
 <?php
 $name = $_POST['name'];
-$tel = $_POST['phone'];
+$tel = $_POST['tel'];
 $email = $_POST['email'];
-$email = $_POST['phone'];
+$phone = $_POST['phone'];
 $message = $_POST['message'];
 $subject = $_POST['subject'];
 
-$inputcheck = $name . $message . $subject;
+$inputcheck = $name;
 
 header('Content-Type: application/json');
 
@@ -15,13 +15,18 @@ if ($inputcheck === ''){
     exit();
 }
 
-if (!preg_match('/^[A-Za-z0-9.-,-? ]+$/', $inputcheck)) {
+if (!preg_match('/^[A-Za-z0-9 ]+$/', $inputcheck)) {
     print json_encode(array('message' => 'De velden bevatten niet toegestane symbolen', 'code' => 0));
     exit();
 } 
 
 if ($name === ''){
     print json_encode(array('message' => 'Vul a.u.b Uw naam in', 'code' => 0));
+    exit();
+}
+
+if ($tel === ''){
+    print json_encode(array('message' => 'Vul a.u.b Uw telefoonnummer in', 'code' => 0));
     exit();
 }
 
@@ -44,11 +49,12 @@ if ($message === ''){
     print json_encode(array('message' => 'Voeg a.u.b een bericht toe', 'code' => 0));
     exit();
 }
-$sender = "info@soundbike.nl";
-$content="From: $name \nEmail: $email \nMessage: $message";
-$recipient = "jobgroen98@gmail.com";
-$mailheader = "From: $sender \r\n";
-mail($recipient, $subject, $content, $mailheader) or die("Error!");
+
+$afzender = "info@soundbike.nl";
+$inhoud="From: $name \n Email: $email \n Telefoonnummer: $tel \n Message: $message";
+$ontvanger = "jobgroen98@gmail.com";
+$mailheader = "From: $afzender \r\n";
+mail($ontvanger, $subject, $inhoud, $mailheader) or die("Error!");
 print json_encode(array('message' => 'Uw e-mail is verzonden!', 'code' => 1));
 exit();
 ?>

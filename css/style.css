@@ -513,7 +513,8 @@ footer img {
 
 /* C O P Y R I G H T */
 section.copyright {
-  background-color: #32353e;
+  background-color: #1e2129;
+  font-size: 14px;
   text-align: center;
   color: #b5b5b5;
   padding: 10px 0;
