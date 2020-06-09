@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>SoundBike</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-replace-svg="nest"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -32,7 +33,7 @@
     </header>
 
     <!-- Header text subpage -->
-    <section class="top-page">
+    <section class="top-page contactpage">
         <article class="container">
             <h1>Contact</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -40,16 +41,34 @@
     </section>
 
 
-    <section class="contact">
-        <div class="container">
-            <article>
-                <p>test</p>
-            </article>
+    <section id="contact">
+        <div class="container-content">
+            <section class="contact">
+                <article>
+                    <h2>Neem contact met Soundbike op</h2>
+                    <hr>
+                    <p>Geintereseerd in een samenwerking? Vul dan het contactformulier in en dan zal Soundbike zo snel mogelijk contact met u opnemen!</p>
+                </article>
+    
+                <article>
+                    <a href="#"><i class="fas rotate fa-phone"></i>0612345678</a>
+                    <a href="#"><i class="fas fa-envelope"></i>info@soundbike.nl</a>
+                </article>
+            </section>
 
-            <article>
-                <p>test</p>
-                <p>test</p>
-            </article>
+            <section class="contactformulier">
+                <h3>Contactformulier</h3>
+
+                <form id="contact-form" name="contact-form" id="contact-form" method="POST">
+                        <input type="text" id="name" name="name" placeholder="Naam*">
+                        <input type="email" id="email" name="email" placeholder="Email*">   
+                        <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Telefoonnummer*">   
+                        <input type="text" id="subject" name="subject" placeholder="Onderwerp*">
+                        <textarea class="form-control" id="message" name="message" rows="8" placeholder="Waar wil je het over hebben?*"></textarea>
+                </form>
+                <div id="status"></div>
+                <button id="send-button" type="submit" onclick="validateForm()" class="submit">Verstuur bericht</button>
+            </section>
         </div>
     </section>
 
