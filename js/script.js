@@ -1,5 +1,4 @@
 // Oproepen van navigatie
-
 function openNav() {
     document.getElementById("navigatie").style.display = "block";
     document.getElementById("openbtn").style.display = "none";
@@ -20,6 +19,19 @@ closenav.onclick = function () {
         document.getElementById("openbtn").style.display = "block";
     }
 };
+
+
+// Navigatie other class when scroll
+$(window).scroll(function() {    
+  var scroll = $(window).scrollTop();
+
+  if(scroll >= 300) {
+      $("header.page").addClass("darkNav");
+  } else {
+      $("header.page").removeClass("darkNav");
+  }
+});
+
 
 
 /* Contact form validation */
