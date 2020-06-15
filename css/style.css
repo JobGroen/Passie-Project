@@ -299,23 +299,91 @@ section.over-soundbike {
 
 
 section.contactpage {background: url("../img/soundbike-contact.png");}
+section.overpage {background: url("../img/over-header.png");}
+
+
+
+
+
+
+
+/* O V E R S O U N D B I K E */
+section.oversoundbike article:first-of-type {
+  text-align: center;
+  position: relative;
+}
+
+section.oversoundbike article:first-of-type:before {
+  background-color: #e2c043;
+  margin-left: 150px;
+  position: absolute;
+  margin-top: -15px;
+  height: 300px;
+  width: 300px;
+  content: "";
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+section#soundbikevoor {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+section.soundbikevoor {
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  padding: 45px 0 0 0;
+}
+
+section.soundbikevoor article{
+  width: calc(100%/3);
+}
+
+section.soundbikevoor .dot {
+  background-color: #40434e;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 40px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+section.soundbikevoor .dot span {
+  transform: translateY(20px);
+  display: block;
+}
+
+@media screen and (max-width: 555px){
+  section.oversoundbike article:first-of-type:before {
+    margin-left: 40px;
+    margin-top: -10px;
+  }
+}
+
+
 
 
 
 
 
 /* C O N T A C T */
-section#contact {
+section#contact, section#oversoundbike {
   padding: 60px 0;
 }
 
-section.contact {
+section.contact, section.oversoundbike {
   flex-direction: row;
   flex-wrap: wrap;
   display: flex;
 }
 
-section.contact article {
+section.contact article, section.oversoundbike article {
   width: calc(100%/2);
 }
 
@@ -333,7 +401,7 @@ section.contact article:last-of-type a:hover {
   transform: scale(1.05);
 }
 
-section.contact article hr {
+section.contact article hr, section.oversoundbike article hr {
   border: 3px solid #e2c043;
   margin: 15px 0;
   width: 75px;
@@ -353,7 +421,12 @@ section.contact article a i {
   font-size: 25px;
 }
 
-section.contact article h2 {font-size: 25px;}
+section.contact article h2,
+section.oversoundbike article h2 {font-size: 25px;}
+
+
+
+
 
 
 
@@ -437,6 +510,16 @@ section.contactformulier h3::before {
 
   section#contact {padding: 30px 0;}
   section.contact article:first-of-type {margin: 0 0 30px 0;}
+
+  section.oversoundbike {display: block;}
+  section.oversoundbike article {width: 100%;}
+
+  section.soundbikevoor {display: block;}
+  section.soundbikevoor article {width: 100%; padding: 15px 0;}
+
+
+  section#oversoundbike {padding: 30px 0;}
+  section.oversoundbike article:first-of-type {margin: 0 0 30px 0;}
 }
 
 
