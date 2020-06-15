@@ -300,9 +300,44 @@ section.over-soundbike {
 
 section.contactpage {background: url("../img/soundbike-contact.png");}
 section.overpage {background: url("../img/over-header.png");}
+section.portfoliopage {background: url("../img/portfolio-header.png");}
 
 
+/* P O R T F O L I O  */
+section.portfolio article:first-of-type {
+  text-align: center;
+  position: relative;
+}
 
+section.portfolio article:first-of-type:before {
+  background-color: #e2c043;
+  margin-left: 45px;
+  position: absolute;
+  margin-top: -15px;
+  height: 300px;
+  width: 300px;
+  content: "";
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+section.portfolio {
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  padding: 45px 0 0 0;
+}
+
+section.portfolio article{
+  width: calc(100%/2);
+}
+
+section.portfolio article hr{
+  border: 3px solid #e2c043;
+  margin: 15px 0;
+  width: 75px;
+}
 
 
 
