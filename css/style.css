@@ -50,9 +50,9 @@ header.intro article p {
 
 header.intro article img {
   background: #e2c043;
+  margin-bottom: 15px;
   border-radius: 50%;
   width: 350px;
-  margin-bottom: 15px;
 }
 
 header.intro article a {
@@ -85,7 +85,7 @@ header.intro article a:hover {
   color: #000000;
 }
 
-header.intro video {
+header.intro img.home-image {
   position: absolute;
   object-fit: cover;
   height: 100vh;
@@ -113,10 +113,10 @@ header.page article img {
 }
 
 header.page article span {
+  transition: .3s ease;
   margin-right: 45px;
   color: #ffffff;
   float: right;
-  transition: .3s ease;
 }
 
 header.page article span:hover {
@@ -124,9 +124,9 @@ header.page article span:hover {
 }
 
 header.page article span:after {
-  content: "Menu";
-  margin-left: 15px;
   text-transform: uppercase;
+  margin-left: 15px;
+  content: "Menu";
 }
 
 header.page article a img {
@@ -167,17 +167,6 @@ header.page article a:hover:after {
 @media screen and (max-width: 500px){
   header.page article a:after {display: none;}
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* N A V I G A T I O N - M E N U */
@@ -293,11 +282,6 @@ section.top-page p {
   font-size: 20px;
 }
 
-section.over-soundbike {
-  background: url("../img/over-soundbike.jpg");
-}
-
-
 section.contactpage {background: url("../img/soundbike-contact.png");}
 section.overpage {background: url("../img/over-header.png");}
 section.portfoliopage {background: url("../img/portfolio-header.png");}
@@ -310,35 +294,54 @@ section.portfolio article:first-of-type {
 }
 
 section.portfolio article:first-of-type:before {
-  background-color: #e2c043;
-  margin-left: 45px;
+  background-color: rgba(0, 0, 0,.2);
   position: absolute;
-  margin-top: -15px;
-  height: 300px;
-  width: 300px;
+  height: 100%;
+  width: 100%;
   content: "";
-  z-index: -1;
+  z-index: 1;
   left: 0;
   top: 0;
 }
 
 section.portfolio {
+  padding: 45px 0 0 0;
   flex-direction: row;
+  position: relative;
   flex-wrap: wrap;
   display: flex;
-  padding: 45px 0 0 0;
 }
 
 section.portfolio article{
-  width: calc(100%/2);
+  width: calc(100%/3);
+  position: relative;
 }
 
-section.portfolio article hr{
+section.portfolio img {
+  object-fit: cover;
+  height: 100%;;
+  width: 100%;
+}
+
+section.portfolio .test {
+  display: none;
+  transition: .5s ease;
+}
+
+section.portfolio article:hover .test {
+  background-color: #e2c043;
   border: 3px solid #e2c043;
-  margin: 15px 0;
-  width: 75px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  position: absolute;
+  text-align: center;
+  color: #ffffff;
+  display: block;
+  padding: 15px;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
 }
-
 
 
 
